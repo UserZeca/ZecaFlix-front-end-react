@@ -2,22 +2,24 @@ import React from 'react';
 import Menu from './components/Menu';
 import { Main } from './styles'
 import Footer from './components/Footer';
-import AppWrapper from './components/AppWrapper';
 
-
-
+/* Obs: <> </> ou React.Fragment, são similares. Ambos permitem o agrupamento
+    de componentes quando fazem a função de um elemento pai.
+*/
 function PageDefault({children}){
 
     return (
-        <AppWrapper>
-            <Menu />
-               <Main> 
-                  {children}
+        <>
+                <Menu />
+                <Main> 
+                    {children}
                 </Main>
-            <Footer />
-        </AppWrapper>
+                <Footer />
+        </>
 
     );
+
+
 
 }
 
