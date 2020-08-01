@@ -1,10 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import Menu from '../../components/PageDefault/components/Menu';
 import BannerMain from '../../components/BannerMain';
 import dadosIniciais from '../../data/dados_iniciais.json';
 import Carroussel from '../../components/Carroussel';
-import Footer from '../../components/PageDefault/components/Footer';
 import PageDefault from '../../components/PageDefault';
 import '../../index.css';
 
