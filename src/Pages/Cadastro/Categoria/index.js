@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormFild';
+import Button from '../../../components/Button';
 
 
 const Container = styled.div`
@@ -45,7 +46,7 @@ function CadastroCategoria(){
     }
 
     useEffect(() => {
-        const URL = 'http://localhost:3000/categorias';
+        const URL = 'http://localhost:8080/categorias';
         
         fetch(URL)
             .then(async (respostaDoServidor) => {
@@ -53,13 +54,12 @@ function CadastroCategoria(){
                 setCategorias([
                     ...resposta,
                 ])
+                console.log(resposta);
 
             })
 
-
-      
-
-    });
+            
+    },[]);
 
 
     return (
@@ -81,9 +81,9 @@ function CadastroCategoria(){
                     <FormField label="Descrição:" value={valores.descricao} name="descricao" type="textarea" onChange={ handleDoValorCampo }/>
                     <FormField label="Cor:" value={valores.cor} name="cor" type="color" onChange={ handleDoValorCampo }/>
      
-                    <button>
+                    <Button>
                         Cadastrar
-                    </button>
+                    </Button>
                 
 
 
