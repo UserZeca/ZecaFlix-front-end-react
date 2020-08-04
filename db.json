@@ -3,13 +3,13 @@
         {
             "id": 1,
             "nome": "Filmes-Livros",
-            "deacrição": "Filmes baseados em livros",
+            "descrição": "Filmes baseados em livros",
             "cor": "#4d2421"
         },
         {
             "id": 2,
             "nome": "Filmes-Aventura",
-            "deacrição": "Filmes de aventura",
+            "descrição": "Filmes de aventura",
             "cor": "#214d2d"
         }
 
