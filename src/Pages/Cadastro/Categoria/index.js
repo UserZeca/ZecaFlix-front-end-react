@@ -4,14 +4,14 @@ import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
-
+import useForm from '../../../components/hooks'
+import Data from '../../../components/repositories/categorias'
 
 const Container = styled.div`
     padding-top: 50px;
     padding-left: 5%;
     padding-right: 5%;
 `;
-
 
 function CadastroCategoria(){
     
@@ -23,42 +23,26 @@ function CadastroCategoria(){
         cor: '#000'
     }
 
+    const { valores ,handleDoValorCampo, clearForm} = useForm(valoresIniciais);
     
-    const [valores, setValores] = useState(valoresIniciais); // Desistruturação de um array
-
-
-    function setValor(chave, valor){
-        setValores({    // Desistruturação de um objeto
-            ...valores,
-            [chave]: valor
-        })
-
-    }
-
-    function handleDoValorCampo(e) {
-
-        setValor(
-
-            e.target.getAttribute('name'),
-            e.target.value
-        );
-    
-    }
+ 
 
     useEffect(() => {
-        const URL = 'http://localhost:8080/categorias';
-        
-        fetch(URL)
-            .then(async (respostaDoServidor) => {
-                const resposta = await respostaDoServidor.json();
-                setCategorias([
-                    ...resposta,
-                ])
-                console.log(resposta);
+        /*const URL = window.location.hostname.includes('localhost') 
+        ? 'https://zecaflix.herokuapp.com/categorias' 
+        : 'http://localhost:8080/categorias';
+        */
+     //  const URL = 'http://localhost:8080/categorias';
+        Data.getAllData().then( (respostaDoServidor) => {
+            setCategorias([
+                ...respostaDoServidor,
+            ])
+            console.log(respostaDoServidor);
+        }).catch((err) =>{
+            // Mostrar erro ao usuário ( Tratar o erro)
+            console.log(err);
+        })
 
-            })
-
-            
     },[]);
 
 
@@ -74,6 +58,8 @@ function CadastroCategoria(){
                         ...categorias,
                         valores
                     ]);
+
+                    clearForm(valoresIniciais);
 
                 } }> 
 
@@ -99,14 +85,11 @@ function CadastroCategoria(){
 
                 {categorias.map((categoria, index) =>{
                     
-
                     return (
                     <li key={`${categoria}${index}`} >
-                         {categoria.nome} 
+                         {categoria.titulo} 
                     </li>
                     )
-                    
-
 
                 })}
             </ul>

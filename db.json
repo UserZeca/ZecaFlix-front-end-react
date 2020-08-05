@@ -11,10 +11,18 @@
             "nome": "Filmes-Aventura",
             "descrição": "Filmes de aventura",
             "cor": "#214d2d"
+        },
+        {
+            "id": 3,
+            "nome": "Filmes-Terror",
+            "descrição": "Filmes de muita tensão e perseguição",
+            "cor": "#cf0a0a"
+        },
+        {
+            "id": 4,
+            "nome": "Documentários",
+            "descrição": "Documentários dos mais variados tipos ",
+            "cor": "#fcba03"
         }
-
-
     ]
-
-
 }

@@ -1,21 +1,35 @@
-import React from 'react';
+import React , { useEffect , useState} from 'react';
 import BannerMain from '../../components/BannerMain';
-import dadosIniciais from '../../data/dados_iniciais.json';
+//import db from '../../data/db.json';
 import Carroussel from '../../components/Carroussel';
 import PageDefault from '../../components/PageDefault';
 import '../../index.css';
-
-
-
+import Data from '../../components/repositories/categorias';
 
 
 function Home() {
+  const [db, setDados ] = useState([]); 
+  
+  
+  useEffect(() => {
+    Data.getAllData().then( (respostaDoServidor) => {
+      
+      setDados(respostaDoServidor);
+
+    })
+    .catch((err) =>{
+      // Mostrar erro ao usuário ( Tratar o erro)
+      console.log(err);
+    });
+  });
+  
+
   return (
     <PageDefault>
   
       <BannerMain 
-      videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-      url={dadosIniciais.categorias[0].videos[0].url}
+      videoTitle={db.categorias[0].videos[0].titulo}
+      url={db.categorias[0].videos[0].url}
       videoDescription={"O que é front-end? Trabalhando na área."}
  
       >
@@ -23,29 +37,29 @@ function Home() {
 
       <Carroussel
           ignoreFirstVideo
-          category={dadosIniciais.categorias[0]}
+          category={db.categorias[0]}
       />
        
       <Carroussel
           false
-          category={dadosIniciais.categorias[1]}
+          category={db.categorias[1]}
       />
 
        <Carroussel
           false
-          category={dadosIniciais.categorias[2]}
+          category={db.categorias[2]}
       />
        <Carroussel
           false
-          category={dadosIniciais.categorias[3]}
+          category={db.categorias[3]}
       />
        <Carroussel
           false
-          category={dadosIniciais.categorias[4]}
+          category={db.categorias[4]}
       />
        <Carroussel
           false
-          category={dadosIniciais.categorias[5]}
+          category={db.categorias[5]}
       />
 
 
