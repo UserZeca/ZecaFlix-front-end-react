@@ -21,12 +21,63 @@ function Home() {
       // Mostrar erro ao usuário ( Tratar o erro)
       console.log(err);
     });
-  });
+  },[]);
   
 
   return (
     <PageDefault>
-  
+      {db.length === 0 && (<div> Carregando..</div>) }
+      {db.length >= 1 && (
+         <>
+         <BannerMain 
+          videoTitle={db[0].videos[0].titulo}
+          url={db[0].videos[0].url}
+          videoDescription={"O que é front-end? Trabalhando na área."}
+      
+          >
+          </BannerMain>
+      
+
+          {db.map((db, index) =>{
+              
+              if(index === 0){
+             
+                  return (
+                    <>
+                      <Carroussel
+                      ignoreFirstVideo
+                      category={db}
+                      />
+                    </>
+                  )
+              }
+              
+              return (
+                <>
+                  <Carroussel key={db.id}
+                      false
+                      category={db}
+                  />
+
+                    
+
+
+                </>
+              )
+
+          })}
+        
+        
+        
+        
+        </>
+      
+      )}
+
+      
+
+
+    {/*
       <BannerMain 
       videoTitle={db.categorias[0].videos[0].titulo}
       url={db.categorias[0].videos[0].url}
@@ -34,7 +85,10 @@ function Home() {
  
       >
       </BannerMain>
-
+      
+      {db.length === 0 && (<div> Carregando..</div>) }
+      
+      
       <Carroussel
           ignoreFirstVideo
           category={db.categorias[0]}
@@ -61,7 +115,7 @@ function Home() {
           false
           category={db.categorias[5]}
       />
-
+      */}
 
     </PageDefault>
 
