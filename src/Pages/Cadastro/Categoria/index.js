@@ -33,7 +33,7 @@ function CadastroCategoria(){
         : 'http://localhost:8080/categorias';
         */
      //  const URL = 'http://localhost:8080/categorias';
-        categoriesRepository.getAllcategoriesRepository().then( (respostaDoServidor) => {
+        categoriesRepository.getAllData().then( (respostaDoServidor) => {
             setCategorias([
                 ...respostaDoServidor,
             ])
