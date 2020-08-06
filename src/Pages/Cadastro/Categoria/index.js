@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
 import useForm from '../../../components/hooks'
-import Data from '../../../components/repositories/categorias'
+import categoriesRepository from '../../../components/repositories/categorias'
 
 const Container = styled.div`
     padding-top: 50px;
@@ -33,7 +33,7 @@ function CadastroCategoria(){
         : 'http://localhost:8080/categorias';
         */
      //  const URL = 'http://localhost:8080/categorias';
-        Data.getAllData().then( (respostaDoServidor) => {
+        categoriesRepository.getAllcategoriesRepository().then( (respostaDoServidor) => {
             setCategorias([
                 ...respostaDoServidor,
             ])
@@ -63,9 +63,30 @@ function CadastroCategoria(){
 
                 } }> 
 
-                    <FormField label="Nome da Categoria:" value={valores.nome} name="nome" type="text" onChange={ handleDoValorCampo }/>
-                    <FormField label="Descrição:" value={valores.descricao} name="descricao" type="textarea" onChange={ handleDoValorCampo }/>
-                    <FormField label="Cor:" value={valores.cor} name="cor" type="color" onChange={ handleDoValorCampo }/>
+                
+                    <FormField
+                     label="Nome da Categoria:" 
+                     value={valores.nome} 
+                     name="nome" 
+                     type="text"
+                     onChange={ handleDoValorCampo }
+                     />
+                     
+                    <FormField
+                     label="Descrição:"
+                     value={valores.descricao}
+                     name="descricao" 
+                     type="textarea"
+                     onChange={ handleDoValorCampo }
+                     />
+
+                    <FormField
+                     label="Cor:" 
+                     value={valores.cor} 
+                     name="cor" 
+                     type="color" 
+                     onChange={ handleDoValorCampo }
+                     />
      
                     <Button>
                         Cadastrar
