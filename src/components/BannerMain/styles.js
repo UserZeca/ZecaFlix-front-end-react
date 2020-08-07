@@ -1,5 +1,5 @@
+import React from  'react';
 import styled from 'styled-components';
-import '../../index.css'
 
 export const ContentAreaContainer = styled.section`
   margin-left: 5%;
@@ -8,7 +8,8 @@ export const ContentAreaContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  position: relative;
+ 
   @media (max-width: 800px) {
     padding-top: 100px;
     flex-direction: column;
@@ -37,7 +38,6 @@ ContentAreaContainer.Category = styled.h1`
   padding: 25px;
   line-height: 1;
   border-radius: 4px;
-
   @media (max-width: 800px) {
     display: none;
     font-size: 18px;
@@ -58,7 +58,6 @@ ContentAreaContainer.Title = styled.h2`
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;
-
   @media (max-width: 800px) {
     font-size: 32px;
     text-align: center;
@@ -67,7 +66,8 @@ ContentAreaContainer.Title = styled.h2`
 
 export const BannerMainContainer = styled.section`
   height: 80vh;
-  color: var(--white);
+  position: relative;
+  color: #fff;
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
   background-size: cover;
   background-position: center;
@@ -75,7 +75,6 @@ export const BannerMainContainer = styled.section`
     height: auto;
     min-height: 50vh;
   }
-
   &:after,
   &:before {
     content: "";
@@ -86,20 +85,18 @@ export const BannerMainContainer = styled.section`
     margin: auto;
     height: 20%;
   }
-
   &:before {
     top: 0;
     height: 100%;
     background: rgba(0,0,0,0.5);
   }
-
   &:after {
     bottom: 0;
-    background: linear-gradient(0deg, #141414 0%, transparent 100%);
+    background: linear-gradient(0deg, #000000 0%, transparent 100%);
   }
 `;
 
-export const WatchButton = styled.button`
+const Button = styled.button`
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
@@ -108,7 +105,7 @@ export const WatchButton = styled.button`
   font-weight: bold;
   font-size: 16px;
   outline: none;
-  border-radius: 4px;
+  border-radius: 5px;
   text-decoration: none;
   display: inline-block;
   border: 1px solid transparent;
@@ -117,10 +114,22 @@ export const WatchButton = styled.button`
   border-color: var(--black);
   transition: opacity .3s;
   display: none;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin: 0 auto;
   @media (max-width: 800px) {
     display: block;
   }
 `;
+
+
+export function WatchButton({children,url}){
+
+    return (
+
+        <a href={url}>
+          <Button>
+              {children}
+          </Button>
+        
+        </a>
+    );
+}

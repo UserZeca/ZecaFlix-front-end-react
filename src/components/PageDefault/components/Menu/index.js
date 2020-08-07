@@ -10,18 +10,19 @@ import { Link } from 'react-router-dom';
 
 
 
-function Menu(){
-
+function Menu({menuWithButtonLink}){
+    console.log('botão valor:',menuWithButtonLink);
     return (
         <MenuWrapper>
             <Link to="/">    
                 <LogoImg src={Logo} alt="zecaflix logo" />
             </Link>
-
-            <Button  as={ Link }  to="/cadastro/video">
-                Novo vídeo
-            </Button>
-
+            {menuWithButtonLink === true && (
+                <Button  as={ Link }  to="/cadastro/video">
+                    Novo vídeo
+                </Button>
+            
+            )}
         </MenuWrapper>
 
 

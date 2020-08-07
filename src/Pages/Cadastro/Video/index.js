@@ -1,23 +1,22 @@
 import React, { useEffect ,useState } from 'react';
-import styled from 'styled-components';
 import PageDefault from '../../../components/PageDefault';
-import { Link , useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import useForm from '../../../hooks';
 import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categorias';
+import { Container, ButtonLink, ContainerBox, ItenBox, } from '../styles';
 
-const Container = styled.div`
-    padding-top: 50px;
-    padding-left: 5%;
-    padding-right: 5%;
-`;
+const menuWithButtonLink = false;
+
 
 function CadastroVideo(){
     const history = useHistory();
     const [categorias, setCategorias] = useState([]);
     const categoriaTitles = categorias.map(({titulo}) => titulo);
+
+
 
     const basicCategoryData = categorias.map(({titulo, id}) => {
         return {titulo,id}
@@ -40,7 +39,7 @@ function CadastroVideo(){
     },[]);
     
     return (
-      <PageDefault>
+      <PageDefault menuWithButtonLink={menuWithButtonLink}>
           <Container>
             <h1>Cadastro de Video</h1>
 
@@ -96,15 +95,26 @@ function CadastroVideo(){
                 suggestions= {categoriaTitles}
               />   
                           
-              <Button type="submit">
-                  Cadastrar
-              </Button>
+              <ContainerBox> 
+                  <ItenBox>  
+                      <Button type="submit">
+                          Cadastrar
+                      </Button>
+                  </ItenBox>
+                  
+                  <ItenBox>
+                      <ButtonLink to="/"> 
+                          Home
+                      </ButtonLink>
+                      <ButtonLink to="/cadastro/categoria"> 
+                          Cadastrar Categoria
+                      </ButtonLink>
+                  </ItenBox>
+              </ContainerBox>
 
             </form>
             
-            <Link to="/cadastro/categoria"> 
-                Cadastrar Categoria
-            </Link>
+          
           </Container>
       </PageDefault>
   

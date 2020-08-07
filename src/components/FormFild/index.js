@@ -42,6 +42,8 @@ const Input = styled.input`
   resize: none;
   border-radius: 4px;
   transition: border-color .3s;
+
+  
   
   &:focus {
     border-bottom-color: var(--primary);

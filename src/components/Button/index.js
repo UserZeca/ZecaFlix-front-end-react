@@ -11,6 +11,7 @@ const Button = styled.button`
     padding: 16px 24px;
     text-decoration: none;
     transition: opacity .3s;
+    z-index: 1;
     cursor: pointer;
 
     &:hover,
@@ -29,6 +30,7 @@ const Button = styled.button`
         outline: 0;
         right: 0;
         text-align: center;
+        width: 100%;
     }
 `;
 

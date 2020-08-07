@@ -1,13 +1,16 @@
 import React , { useState ,useEffect } from 'react';
 
 import PageDefault from '../../../components/PageDefault';
-import { Link , useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks'
 import categoriesRepository from '../../../repositories/categorias'
-import { Container } from './styles'
+import { Container, ContainerBox, ItenBox, ButtonLink } from '../styles'
 
+
+
+const menuWithButtonLink = false;
 
 function CadastroCategoria(){
     
@@ -44,11 +47,11 @@ function CadastroCategoria(){
 
 
     return (
-      <PageDefault>
+      <PageDefault menuWithButtonLink={menuWithButtonLink}>
           <Container>
             <h1>Cadastro de Categoria: {valores.titulo} </h1>
             
-                <form onSubmit={ function handlerSubmit(info){
+                <form styles="position:absolute;" onSubmit={ function handlerSubmit(info){
                     info.preventDefault();
 
                   const searchCategoria =  categorias.find((categoria) =>{
@@ -113,12 +116,24 @@ function CadastroCategoria(){
                      type="color" 
                      onChange={ handleDoValorCampo }
                      />
-     
-                    <Button>
-                        Cadastrar
-                    </Button>
-                
 
+
+                    <ContainerBox> 
+                        <ItenBox>  
+                            <Button type="submit">
+                                Cadastrar
+                            </Button>
+                        </ItenBox>
+                        
+                        <ItenBox>
+                            <ButtonLink to="/"> 
+                                Home
+                            </ButtonLink>
+                            <ButtonLink to="/cadastro/videos"> 
+                                Cadastrar Vídeo
+                            </ButtonLink>
+                        </ItenBox>
+                    </ContainerBox>
 
             </form>
 
@@ -141,10 +156,6 @@ function CadastroCategoria(){
                 })}
             </ul>
 
-
-            <Link to="/"> 
-                Ir para home
-            </Link>
           </Container>
       </PageDefault>
   

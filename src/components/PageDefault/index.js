@@ -6,11 +6,12 @@ import Footer from './components/Footer';
 /* Obs: <> </> ou React.Fragment, são similares. Ambos permitem o agrupamento
     de componentes quando fazem a função de um elemento pai.
 */
-function PageDefault({children}){
+function PageDefault({children,menuWithButtonLink}){
 
+    console.log('Valor do botão', menuWithButtonLink);
     return (
         <>
-                <Menu />
+                <Menu menuWithButtonLink = {menuWithButtonLink} />
                 <Main> 
                     {children}
                 </Main>

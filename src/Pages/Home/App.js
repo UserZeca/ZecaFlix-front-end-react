@@ -7,6 +7,8 @@ import '../../index.css';
 import Data from '../../repositories/categorias';
 
 
+const menuWithButtonLink = true;
+
 function Home() {
   const [db, setDados ] = useState([]); 
   
@@ -25,7 +27,7 @@ function Home() {
   
 
   return (
-    <PageDefault>
+    <PageDefault menuWithButtonLink={menuWithButtonLink}>
       {db.length === 0 && (<div> Carregando..</div>) }
       {db.length >= 1 && (
          <>
@@ -34,8 +36,8 @@ function Home() {
           url={db[0].videos[0].url}
           videoDescription={"O que é front-end? Trabalhando na área."}
       
-          >
-          </BannerMain>
+          />
+          
       
 
           {db.map((db, index) =>{
@@ -58,9 +60,6 @@ function Home() {
                       false
                       category={db}
                   />
-
-                    
-
 
                 </>
               )
