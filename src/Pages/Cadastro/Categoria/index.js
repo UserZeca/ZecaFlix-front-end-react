@@ -129,7 +129,7 @@ function CadastroCategoria(){
                             <ButtonLink to="/"> 
                                 Home
                             </ButtonLink>
-                            <ButtonLink to="/cadastro/videos"> 
+                            <ButtonLink to="/cadastro/video"> 
                                 Cadastrar Vídeo
                             </ButtonLink>
                         </ItenBox>

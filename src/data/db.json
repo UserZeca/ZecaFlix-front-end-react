@@ -53,24 +53,6 @@
         "text": "Curso sobre aprendizado na Alura",
         "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
       }
-    },
-    {
-      "id": 7,
-      "titulo": "Harry Potter",
-      "cor": "#ff0000",
-      "link_extra": {
-        "text": "",
-        "url": ""
-      }
-    },
-    {
-      "id": 8,
-      "titulo": "Documentários",
-      "cor": "#7a5506",
-      "link_extra": {
-        "text": "",
-        "url": ""
-      }
     }
   ],
   "videos": [
@@ -259,24 +241,6 @@
       "categoriaId": 6,
       "titulo": "Como aprender a programar?",
       "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
-    },
-    {
-      "id": 9,
-      "categoriaId": 4,
-      "titulo": "La La Land - City of Stars",
-      "url": "https://www.youtube.com/watch?v=OTzZZDJSdcE"
-    },
-    {
-      "id": 10,
-      "categoriaId": 7,
-      "titulo": "La La Land - City of Stars",
-      "url": "https://www.youtube.com/watch?v=OTzZZDJSdcE"
-    },
-    {
-      "id": 11,
-      "categoriaId": 5,
-      "titulo": "Jogo com JavaScript #01: Criando um Flappy Bird do ZERO!!!",
-      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c&list=PLTcmLKdIkOWmeNferJ292VYKBXydGeDej"
     }
   ]
 }

@@ -32,7 +32,7 @@ const ItenBox = styled.div`
 
 
 
-const WrapperButton = styled.button`
+const WrapperButton = styled.div`
     
     box-sizing: content-box;
     border: 0px;
