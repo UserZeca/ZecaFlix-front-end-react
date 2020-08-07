@@ -4,7 +4,7 @@ import BannerMain from '../../components/BannerMain';
 import Carroussel from '../../components/Carroussel';
 import PageDefault from '../../components/PageDefault';
 import '../../index.css';
-import Data from '../../components/repositories/categorias';
+import Data from '../../repositories/categorias';
 
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
   
   
   useEffect(() => {
-    Data.getAllData().then( (respostaDoServidor) => {
+    Data.getAllWithVideos().then( (respostaDoServidor) => {
       
       setDados(respostaDoServidor);
 

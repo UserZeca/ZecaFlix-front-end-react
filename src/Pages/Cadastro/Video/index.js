@@ -2,11 +2,11 @@ import React, { useEffect ,useState } from 'react';
 import styled from 'styled-components';
 import PageDefault from '../../../components/PageDefault';
 import { Link , useHistory } from 'react-router-dom';
-import useForm from '../../../components/hooks';
+import useForm from '../../../hooks';
 import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
-import videosRepository from '../../../components/repositories/videos';
-import categoriesRepository from '../../../components/repositories/categorias';
+import videosRepository from '../../../repositories/videos';
+import categoriesRepository from '../../../repositories/categorias';
 
 const Container = styled.div`
     padding-top: 50px;
@@ -19,6 +19,7 @@ function CadastroVideo(){
     const [categorias, setCategorias] = useState([]);
     const categoriaTitles = categorias.map(({titulo}) => titulo);
 
+
     const { handleDoValorCampo , valores} = useForm({
       titulo: '',
       url: '',
@@ -27,7 +28,7 @@ function CadastroVideo(){
 
     useEffect(() =>{
 
-      categoriesRepository.getAllData()
+      categoriesRepository.getAllWithVideos()
       .then((categoriasFromServer) =>{
         setCategorias(categoriasFromServer);
       });
@@ -45,21 +46,39 @@ function CadastroVideo(){
               event.preventDefault();
               // alert('Video cadastrado com sucesso');
               
-              const categoriaEscolhida = categorias.find((categoria) => {
-                  return categoria.titulo === valores.titulo;
+              const categoriaEscolhida = categoriaTitles.find((categoria) => {
+                  return categoria === valores.categoria;
               })
 
-              videosRepository.create({
+              if(categoriaEscolhida === false){
+                  alert('Erro ao cadastrar video');
+              }else{
+                  videosRepository.create({
+                    categoriaId: categoriaEscolhida.id,
+                    id: '',
+                    titulo: valores.titulo,
+                    url: valores.url,
+                  })
+                  .then(() =>{
+    
+                    history.push('/');
+    
+                  })
+              }
+
+
+
+             /* videosRepository.create({
                 titulo: valores.titulo,
                 url: valores.url,
-                categoriaId: categoriaEscolhida.id,
+                categoria: categoriaEscolhida,
               })
               .then(() =>{
 
                 history.push('/');
 
               })
-              
+              */
 
             }}>
               <FormField

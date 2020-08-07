@@ -1,17 +1,13 @@
 import React , { useState ,useEffect } from 'react';
-import styled from 'styled-components';
+
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
-import useForm from '../../../components/hooks'
-import categoriesRepository from '../../../components/repositories/categorias'
+import useForm from '../../../hooks'
+import categoriesRepository from '../../../repositories/categorias'
+import { Container } from './styles'
 
-const Container = styled.div`
-    padding-top: 50px;
-    padding-left: 5%;
-    padding-right: 5%;
-`;
 
 function CadastroCategoria(){
     
@@ -33,7 +29,7 @@ function CadastroCategoria(){
         : 'http://localhost:8080/categorias';
         */
      //  const URL = 'http://localhost:8080/categorias';
-        categoriesRepository.getAllData().then( (respostaDoServidor) => {
+        categoriesRepository.getAll().then( (respostaDoServidor) => {
             setCategorias([
                 ...respostaDoServidor,
             ])
