@@ -25,9 +25,30 @@ function getAll(){
         });
 }
 
+function create(objetoDaCategoria){
+    return fetch(`${URL_CATEGORIES}`,{
+        method: 'POST',
+        headers: {
+            'Content-type' : 'application/json',
+        },
+        body: JSON.stringify(objetoDaCategoria),
+    })
+    .then(
+        async (respostaDoServidor) => {
+            if(respostaDoServidor.ok){   
+                const resposta = await respostaDoServidor.json();
+                console.log('reposta', resposta);
+
+                return resposta;
+            }
+            throw new Error('Não foi possível se conectar ao servidor!');
+        });
+}
+
 
 
 export default {
     getAllWithVideos,
-    getAll
+    getAll,
+    create,
 };

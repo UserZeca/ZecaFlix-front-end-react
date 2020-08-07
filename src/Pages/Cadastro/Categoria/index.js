@@ -14,7 +14,7 @@ function CadastroCategoria(){
     const [categorias, setCategorias] = useState([]);  // Desistruturação de um array
 
     const valoresIniciais = {
-        nome: '',
+        titulo: '',
         descricao: '',
         cor: '#000'
     }
@@ -45,25 +45,56 @@ function CadastroCategoria(){
     return (
       <PageDefault>
           <Container>
-            <h1>Cadastro de Categoria: {valores.nome} </h1>
+            <h1>Cadastro de Categoria: {valores.titulo} </h1>
             
                 <form onSubmit={ function handlerSubmit(info){
                     info.preventDefault();
 
-                    setCategorias([
-                        ...categorias,
-                        valores
-                    ]);
+                  const searchCategoria =  categorias.find((categoria) =>{
+                        return categoria.titulo === valores.titulo;
+                    }) 
 
-                    clearForm(valoresIniciais);
+                    
+                    if(searchCategoria === undefined){
+                        
+                        setCategorias([
+                            ...categorias,
+                            valores
+                        ]);
+
+                        categoriesRepository.create({
+                            id: '',
+                            titulo: valores.titulo,
+                            cor: valores.cor,
+                            link_extra: {
+                                text: '',
+                                url: ''
+                              }
+                          })
+                          .then(() =>{
+
+                            alert('Categoria Criada com Sucesso!');
+                            //history.push('/');
+                            clearForm(valoresIniciais);
+                          })
+                        
+                    }else{
+                        
+                        alert('Essa categoria já exite')
+                        clearForm(valoresIniciais);
+                    
+                    }
+                    
+
+
 
                 } }> 
 
                 
                     <FormField
                      label="Nome da Categoria:" 
-                     value={valores.nome} 
-                     name="nome" 
+                     value={valores.titulo} 
+                     name="titulo" 
                      type="text"
                      onChange={ handleDoValorCampo }
                      />

@@ -19,6 +19,11 @@ function CadastroVideo(){
     const [categorias, setCategorias] = useState([]);
     const categoriaTitles = categorias.map(({titulo}) => titulo);
 
+    const basicCategoryData = categorias.map(({titulo, id}) => {
+        return {titulo,id}
+      }  
+    );
+
 
     const { handleDoValorCampo , valores} = useForm({
       titulo: '',
@@ -35,6 +40,7 @@ function CadastroVideo(){
 
     },[]);
     
+    //console.log('categorias',categorias)
 
 
     return (
@@ -46,22 +52,26 @@ function CadastroVideo(){
               event.preventDefault();
               // alert('Video cadastrado com sucesso');
               
-              const categoriaEscolhida = categoriaTitles.find((categoria) => {
-                  return categoria === valores.categoria;
+              const categoriaEscolhida = basicCategoryData.find((categoria) => {                  
+                return categoria.titulo === valores.categoria ? categoria : false;
               })
 
               if(categoriaEscolhida === false){
                   alert('Erro ao cadastrar video');
               }else{
+                  
+                 
                   videosRepository.create({
-                    categoriaId: categoriaEscolhida.id,
                     id: '',
+                    categoriaId: categoriaEscolhida.id ,
                     titulo: valores.titulo,
                     url: valores.url,
                   })
                   .then(() =>{
-    
-                    history.push('/');
+                    //alert('index', index);
+                    //console.log('index', index);
+                    console.log('categoria ID', categoriaEscolhida.id)
+                    //history.push('/');
     
                   })
               }
