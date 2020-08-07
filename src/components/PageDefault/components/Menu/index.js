@@ -18,7 +18,7 @@ function Menu(){
                 <LogoImg src={Logo} alt="zecaflix logo" />
             </Link>
 
-            <Button as={ Link }  to="/cadastro/video">
+            <Button  as={ Link }  to="/cadastro/video">
                 Novo vídeo
             </Button>
 

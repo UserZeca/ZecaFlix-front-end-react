@@ -1,7 +1,7 @@
 import React , { useState ,useEffect } from 'react';
 
 import PageDefault from '../../../components/PageDefault';
-import { Link } from 'react-router-dom';
+import { Link , useHistory } from 'react-router-dom';
 import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks'
@@ -12,6 +12,7 @@ import { Container } from './styles'
 function CadastroCategoria(){
     
     const [categorias, setCategorias] = useState([]);  // Desistruturação de um array
+    const history = useHistory();
 
     const valoresIniciais = {
         titulo: '',
@@ -72,9 +73,7 @@ function CadastroCategoria(){
                               }
                           })
                           .then(() =>{
-
-                            alert('Categoria Criada com Sucesso!');
-                            //history.push('/');
+                            history.push('/');
                             clearForm(valoresIniciais);
                           })
                         

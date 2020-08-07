@@ -24,7 +24,6 @@ function CadastroVideo(){
       }  
     );
 
-
     const { handleDoValorCampo , valores} = useForm({
       titulo: '',
       url: '',
@@ -40,9 +39,6 @@ function CadastroVideo(){
 
     },[]);
     
-    //console.log('categorias',categorias)
-
-
     return (
       <PageDefault>
           <Container>
@@ -50,13 +46,15 @@ function CadastroVideo(){
 
             <form onSubmit={(event) => {
               event.preventDefault();
-              // alert('Video cadastrado com sucesso');
               
               const categoriaEscolhida = basicCategoryData.find((categoria) => {                  
                 return categoria.titulo === valores.categoria ? categoria : false;
               })
 
               if(categoriaEscolhida === false){
+
+                 // Tratar o Erro  
+
                   alert('Erro ao cadastrar video');
               }else{
                   
@@ -68,27 +66,10 @@ function CadastroVideo(){
                     url: valores.url,
                   })
                   .then(() =>{
-                    //alert('index', index);
-                    //console.log('index', index);
-                    console.log('categoria ID', categoriaEscolhida.id)
-                    //history.push('/');
+                    history.push('/');
     
                   })
               }
-
-
-
-             /* videosRepository.create({
-                titulo: valores.titulo,
-                url: valores.url,
-                categoria: categoriaEscolhida,
-              })
-              .then(() =>{
-
-                history.push('/');
-
-              })
-              */
 
             }}>
               <FormField
@@ -113,12 +94,12 @@ function CadastroVideo(){
                 type="text"
                 onChange={ handleDoValorCampo }
                 suggestions= {categoriaTitles}
-              />               
+              />   
+                          
               <Button type="submit">
                   Cadastrar
               </Button>
 
-            
             </form>
             
             <Link to="/cadastro/categoria"> 
