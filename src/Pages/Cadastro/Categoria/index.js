@@ -6,7 +6,7 @@ import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks'
 import categoriesRepository from '../../../repositories/categorias'
-import { Container, ContainerBox, ItenBox, ButtonLink } from '../styles'
+import { Container, ContainerBox, ItenBox, ButtonLink, ContainerList, ItemList } from '../styles'
 
 
 
@@ -28,11 +28,7 @@ function CadastroCategoria(){
  
 
     useEffect(() => {
-        /*const URL = window.location.hostname.includes('localhost') 
-        ? 'https://zecaflix.herokuapp.com/categorias' 
-        : 'http://localhost:8080/categorias';
-        */
-     //  const URL = 'http://localhost:8080/categorias';
+ 
         categoriesRepository.getAll().then( (respostaDoServidor) => {
             setCategorias([
                 ...respostaDoServidor,
@@ -51,7 +47,7 @@ function CadastroCategoria(){
           <Container>
             <h1>Cadastro de Categoria: {valores.titulo} </h1>
             
-                <form styles="position:absolute;" onSubmit={ function handlerSubmit(info){
+                <form  onSubmit={ function handlerSubmit(info){
                     info.preventDefault();
 
                   const searchCategoria =  categorias.find((categoria) =>{
@@ -143,18 +139,18 @@ function CadastroCategoria(){
 
             )}
 
-            <ul>
+            <ContainerList>
 
                 {categorias.map((categoria, index) =>{
-                    
-                    return (
-                    <li key={`${categoria}${index}`} >
-                         {categoria.titulo} 
-                    </li>
+
+                return (
+                    <ItemList backgroundColor={categoria.cor} key={`${categoria}${index}`} >
+                         {categoria.titulo}
+                    </ItemList>
                     )
 
                 })}
-            </ul>
+            </ContainerList>
 
           </Container>
       </PageDefault>

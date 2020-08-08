@@ -64,16 +64,41 @@ function ButtonLink(props){
                 <Button as={Link} to={props.to} >
                     {props.children}
                 </Button>
-                <clearFloat />
+            
             </WrapperButton>
 
         </>
-    );
+    );   
 }
+
+const ContainerList = styled.section`
+    box-sizing: content-box;
+    margin-top: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+
+const ItemList = styled.div`
+
+    max-width: 25%;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: ${({ backgroundColor }) => `${backgroundColor}`}
+
+`;
+
+
+
 
 export {
     Container,
     ContainerBox,
     ItenBox,
     ButtonLink,
+    ContainerList,
+    ItemList,
+
 }

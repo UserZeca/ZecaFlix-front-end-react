@@ -6,7 +6,7 @@ import FormField from '../../../components/FormFild';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categorias';
-import { Container, ButtonLink, ContainerBox, ItenBox, } from '../styles';
+import { Container, ButtonLink, ContainerBox, ItenBox } from '../styles';
 
 const menuWithButtonLink = false;
 
