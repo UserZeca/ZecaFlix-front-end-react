@@ -82,10 +82,8 @@ const ContainerList = styled.section`
 
 const ItemList = styled.div`
 
-    max-width: 25%;
     padding: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
     background-color: ${({ backgroundColor }) => `${backgroundColor}`}
 
 `;
