@@ -4,7 +4,7 @@
         ? 'https://zecaflix.herokuapp.com' 
         : 'http://localhost:8080';
 */
-const URL_BACKEND = 'https://zecaflix.herokuapp.com';
+const URL_BACKEND = 'http://localhost:8080';
 console.log(URL_BACKEND);
 
 export default {

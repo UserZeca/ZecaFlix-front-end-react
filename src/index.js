@@ -5,16 +5,9 @@ import Home from './Pages/Home/App';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import CadastroVideo from './Pages/Cadastro/Video';
 import CadastroCategoria from './Pages/Cadastro/Categoria';
+import Erro404 from './Pages/Erros/Erro404';
 
 
-
-const Erro404 = () => (
-
-  <div> 
-    Erro 404!
-  </div>
-
-);
 
 
 ReactDOM.render(

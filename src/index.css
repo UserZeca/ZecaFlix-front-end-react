@@ -1,4 +1,5 @@
 * {
+  
   box-sizing: border-box;
   font-family: 'Roboto',sans-serif;
   
@@ -30,7 +31,6 @@ a {
 #root {
 
   min-height: 100vh;
-  background-color: orange;
   display: flex;
   flex-direction: column;
 }
