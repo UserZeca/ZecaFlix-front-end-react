@@ -62,7 +62,7 @@ const ListItemwithAnimation = styled.li`
                         }
                     }       
             `
-            break;
+           
             
             case '2':
                 return css `
@@ -76,7 +76,7 @@ const ListItemwithAnimation = styled.li`
                 
                 `;
             
-            break;
+        
 
             case '3':
                 return css `
@@ -90,7 +90,7 @@ const ListItemwithAnimation = styled.li`
                 
                 `;
             
-            break;
+          
          
 
             default:

@@ -3,6 +3,11 @@ import React from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
+
+const SizeLayout = !(window.matchMedia("(max-width: 700px)").matches);
+
+
+
 const Container = styled.ul`
   padding: 0;
   margin: 0;
@@ -39,11 +44,13 @@ export const SliderItem = styled.li`
 `;
 
 
+
 const Slider = ({ children }) => (
+
   <Container>
-    <SlickSlider {...{
+    <SlickSlider infinite={SizeLayout} {...{
       dots: false,
-      infinite: true,
+      slidesToScroll: 1,
       speed: 300,
       centerMode: false,
       variableWidth: true,
