@@ -14,23 +14,27 @@ const menuWithButtonLink = true;
 let loading = true;
 
 
+
 function Home() {
+
+  // db -> Objeto que irá armazenar informações obtidas do servidor
   const [db, setDados ] = useState([]); 
   
   
-  useEffect(() => {
-    Data.getAllWithVideos().then( (respostaDoServidor) => {
-      
-      setDados(respostaDoServidor);
-      loading = false;
+    useEffect(() => {
+        Data.getAllWithVideos().then( (respostaDoServidor) => {
+          
+          setDados(respostaDoServidor);
+          loading = false;
 
-    })
-    .catch((err) =>{
-      // Mostrar erro ao usuário ( Tratar o erro)
-      console.log(err);
-    });
-  },[]);
-  
+        })
+        .catch((err) =>{
+          // Mostrar erro ao usuário ( Tratar o erro)
+          console.log(err);
+        });
+      }
+    ,[]);
+    
 
   return (
    
@@ -40,19 +44,21 @@ function Home() {
       {db.length === 0 && loading === true && (
       
         <Loading />
+
+      
       
       ) }
-      {db.length >= 1 && (
-          <>
+      
+          {db.length >= 1 && (
+
+            <>
               <BannerMain 
                 videoTitle={db[0].videos[0].titulo}
                 url={db[0].videos[0].url}
                 videoDescription={"O que é front-end? Trabalhando na área."}
-            
-                />
-                
-            
 
+                />
+                  
                 {db.map((db, index) =>{
                     
                     if(index === 0){
@@ -79,14 +85,12 @@ function Home() {
 
                 })}
               
-              
-              
-            
-          </>
-        
-        )
-     }
+            </>
 
+
+            )
+        }
+    
       
     </PageDefault>
 

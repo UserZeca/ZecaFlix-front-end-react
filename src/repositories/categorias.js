@@ -4,17 +4,19 @@ const URL_CATEGORIES = `${config.URL_BACKEND}/categorias`;
 
 
 function getAllWithVideos(){
-    return fetch(`${URL_CATEGORIES}?_embed=videos`).then(
+
+    return (fetch(`${URL_CATEGORIES}?_embed=videos`).then(
         async (respostaDoServidor) => {
             if(respostaDoServidor.ok){   
                 const resposta = await respostaDoServidor.json();
                 return resposta;
             }
             throw new Error('Não foi possível se conectar ao servidor!');
-        });
+        }));
 }
 
 function getAll(){
+    setTimeout(()=>{console.log('Requirindo página')}, 5000);
     return fetch(`${URL_CATEGORIES}?_embed=videos`).then(
         async (respostaDoServidor) => {
             if(respostaDoServidor.ok){   

@@ -12,11 +12,24 @@ const Button = styled.button`
     text-decoration: none;
     transition: opacity .3s;
     z-index: 1;
-    cursor: pointer;
 
-    &:hover,
-     &:focus {
-        opacity: .5;
+    cursor: pointer;
+   
+   &:disabled {
+
+    cursor: default;
+    opacity: 0.5;
+    
+
+   }
+
+
+    &:enabled {
+        &:hover,
+        &:focus {
+            opacity: .5;
+
+        }
     }
 
     @media(max-width: 800px){

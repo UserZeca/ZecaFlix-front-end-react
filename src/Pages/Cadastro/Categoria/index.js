@@ -116,7 +116,12 @@ function CadastroCategoria(){
 
                     <ContainerBox> 
                         <ItenBox>  
-                            <Button type="submit">
+                            <Button type="submit"
+                                disabled={
+                                    valores.titulo === '' &&
+                                    valores.descricao === '' 
+                                } 
+                            >
                                 Cadastrar
                             </Button>
                         </ItenBox>

@@ -97,9 +97,17 @@ function CadastroVideo(){
                           
               <ContainerBox> 
                   <ItenBox>  
-                      <Button type="submit">
-                          Cadastrar
-                      </Button>
+                     
+                    <Button type="submit" 
+                      disabled={
+                        valores.titulo === '' &&
+                        valores.categoria === '' && 
+                        valores.url === '' 
+                      } 
+                    >
+                      Cadastrar
+                    </Button>
+
                   </ItenBox>
                   
                   <ItenBox>
