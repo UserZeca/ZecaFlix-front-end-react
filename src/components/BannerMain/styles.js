@@ -115,14 +115,11 @@ const Button = styled.button`
   transition: opacity .3s;
   display: none;
   margin: 0 auto;
+  text-decoration: none;
 
   @media (max-width: 800px) {
     display: block;
   }
-`;
-
-const link = styled.a`
-    text-decoration: none;
 `;
 
 
@@ -130,11 +127,11 @@ export function WatchButton({children,url}){
 
     return (
 
-        <link href={url}>
+        <a href={url}>
           <Button>
               {children}
           </Button>
         
-        </link>
+        </a>
     );
 }
