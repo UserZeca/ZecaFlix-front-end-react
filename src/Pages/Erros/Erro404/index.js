@@ -12,8 +12,6 @@ const Container = styled.div`
     justify-content: center;
     
 
-
-  
 `;
 
 
@@ -23,18 +21,20 @@ const List = styled.ul`
 
 `;
 
-const ItenOfList = styled.li`
+const ListItem = styled.li`
     display: inline-block;
     list-style: none;
-    font-size: 20vh;
+    color: red;
+    font-size: 100px;
     margin: 0 5px;
     transform: opacity .6;
-    animation-name: test;
+    animation-name: changeColor;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
 
-    @keyframes test  {
+
+    @keyframes changeColor  {
         0%   {color: red;}
         50%  {color: blue;}
         75%  {color: black;} 
@@ -48,12 +48,34 @@ const ItenOfList = styled.li`
 
     }
 
+    @media (max-width: 800px) and (orientation: portrait){
+        font-size: 60px;
+    } 
+
+    @media (max-width: 360px) and (orientation: portrait){
+        font-size: 40px;
+    }
+
+   
+
+`;
 
 
+const ListSubItem = styled.li`
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 28px;
+    color: var(--white);
     
+
     @media(max-width: 800px){
-        font-size: 10vh;
-    }       
+        font-size: 16px;
+    }  
+
+    @media (max-width: 360px){
+        font-size: 14px;
+    }
 
 `;
 
@@ -67,38 +89,43 @@ function Erro404(){
         <Container>
                 <List>
                     
-                    <ItenOfList>
+                    <ListItem>
                     E
-                    </ItenOfList>
+                    </ListItem>
                     
-                    <ItenOfList>
+                    <ListItem>
                     R
-                    </ItenOfList>
+                    </ListItem>
 
-                    <ItenOfList>
+                    <ListItem>
                     R
-                    </ItenOfList>
+                    </ListItem>
                     
-                    <ItenOfList>
+                    <ListItem>
                     O
-                    </ItenOfList>
+                    </ListItem>
                     
-                    <ItenOfList>
+                    <ListItem>
                     
-                    </ItenOfList>
+                    </ListItem>
                     
-                    <ItenOfList>
+                    <ListItem>
                     4
-                    </ItenOfList>
+                    </ListItem>
                     
-                    <ItenOfList>
+                    <ListItem>
                     0
-                    </ItenOfList>
+                    </ListItem>
                     
-                    <ItenOfList>
+                    <ListItem>
                     4
-                    </ItenOfList>
-                
+                    </ListItem>
+
+                    <ListSubItem>
+                        Página não encontrada!
+                    </ListSubItem>
+                    
+
                 </List>
 
 
