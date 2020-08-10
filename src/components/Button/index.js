@@ -19,7 +19,6 @@ const Button = styled.button`
 
     cursor: default;
     opacity: 0.5;
-    
 
    }
 
