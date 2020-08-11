@@ -27,6 +27,8 @@ function CadastroCategoria(){
         url: '',
     }
 
+    
+
 
     const { valores ,handleDoValorCampo, clearForm} = useForm(valoresIniciais);
     
@@ -55,7 +57,14 @@ function CadastroCategoria(){
                 <form  onSubmit={ function handlerSubmit(info){
                     info.preventDefault();
 
-                  const searchCategoria =  categorias.find((categoria) =>{
+                    
+                    if(checked === false){
+                        valores.textLinkExtra = '';
+                        valores.url = '';
+                    }
+
+                 
+                    const searchCategoria =  categorias.find((categoria) =>{
                         return categoria.titulo === valores.titulo;
                     }) 
 
@@ -147,17 +156,14 @@ function CadastroCategoria(){
                     )}
 
 
-
                     <ContainerBox> 
                         <ItenBox>  
                             <Button type="submit"
                                 disabled={
                                      (valores.titulo === '' || valores.descricao === '') 
-                                     || (checked === true && (valores.textLinkExtra === '' || valores.url === '') )   
-                                
+                                     || (checked === true && (valores.textLinkExtra === '' || valores.url === '') )  
                                 }
-
-                            >
+                             >
                                 Cadastrar
                             </Button>
                         </ItenBox>
