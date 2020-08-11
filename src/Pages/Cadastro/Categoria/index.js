@@ -13,11 +13,13 @@ const menuWithButtonLink = false;
 
 function CadastroCategoria(){
     
-    const [categorias, setCategorias] = useState([]);  // Desistruturação de um array
-    const history = useHistory();
-    const [checked, setChecked] = useState(false);
+    const [categorias, setCategorias] = useState([]);  // Hooks específico para categorias
+    
+    const history = useHistory();                     // useHistory é um hooks específico pra rotas                      
 
-    const valoresIniciais = {
+    const [checked, setChecked] = useState(false);     // Hooks específico para checkbox
+
+    const valoresIniciais = {       // <- Objeto que armazena valores iniciais para o formulário
         titulo: '',
         descricao: '',
         cor: '#000',
@@ -26,8 +28,9 @@ function CadastroCategoria(){
     }
 
     
-    const { valores ,handleDoValorCampo, clearForm} = useForm(valoresIniciais);
+    const { valores ,handleDoValorCampo, clearForm} = useForm(valoresIniciais);     // Contruindo Hooks de formulário
     
+    // Obtendo as categorias que estão armazenadas no Servidor(na Heroku ou no servidor local)
     useEffect(() => {
  
         categoriesRepository.getAll().then( (respostaDoServidor) => {
@@ -38,6 +41,7 @@ function CadastroCategoria(){
         }).catch((err) =>{
             // Mostrar erro ao usuário ( Tratar o erro)
             console.log(err);
+            alert('Não foi possível concluir ação!');
         })
 
     },[]);
@@ -50,7 +54,7 @@ function CadastroCategoria(){
             
                 <form  onSubmit={ function handlerSubmit(info){
                     info.preventDefault();
-
+                    
                     
                     if(checked === false){
                         valores.textLinkExtra = '';

@@ -1,6 +1,5 @@
 import React , { useEffect , useState} from 'react';
 import BannerMain from '../../components/BannerMain';
-//import db from '../../data/db.json';
 import Carroussel from '../../components/Carroussel';
 import PageDefault from '../../components/PageDefault';
 import '../../index.css';
@@ -55,7 +54,7 @@ function Home() {
               <BannerMain 
                 videoTitle={db[0].videos[0].titulo}
                 url={db[0].videos[0].url}
-                videoDescription={"Do mistério das pirâmides às batalhas entre faraós e grandes conquistadores. Conheça o Antigo Egito e sua história."}
+                videoDescription={"Será que é possível tornar MARTE em um planeta Habitável? Como iremos fazer isso? Descubra aqui, no Nostalgia Ciência!"}
 
                 />
                   

@@ -12,11 +12,9 @@ const menuWithButtonLink = false;
 
 
 function CadastroVideo(){
-    const history = useHistory();
-    const [categorias, setCategorias] = useState([]);
+    const [categorias, setCategorias] = useState([]);              // Hooks específico para categorias     
+    const history = useHistory();                                  // useHistory é um hooks específico pra rotas     
     const categoriaTitles = categorias.map(({titulo}) => titulo);
-
-
 
     const basicCategoryData = categorias.map(({titulo, id}) => {
         return {titulo,id}

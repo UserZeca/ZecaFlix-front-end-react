@@ -4,7 +4,7 @@ const URL_CATEGORIES = `${config.URL_BACKEND}/categorias`;
 
 
 function getAllWithVideos(){
-
+    setTimeout(()=>{console.log('Requirindo todas as categorias com os videos...')}, 1000);
     return (fetch(`${URL_CATEGORIES}?_embed=videos`).then(
         async (respostaDoServidor) => {
             if(respostaDoServidor.ok){   
@@ -16,7 +16,7 @@ function getAllWithVideos(){
 }
 
 function getAll(){
-    setTimeout(()=>{console.log('Requirindo página')}, 5000);
+    setTimeout(()=>{console.log('Requirindo todas as categorias...')}, 1000);
     return fetch(`${URL_CATEGORIES}?_embed=videos`).then(
         async (respostaDoServidor) => {
             if(respostaDoServidor.ok){   
@@ -28,6 +28,7 @@ function getAll(){
 }
 
 function create(objetoDaCategoria){
+    setTimeout(()=>{console.log('Enviando nova categoria ao servidor...')}, 1000);
     return fetch(`${URL_CATEGORIES}`,{
         method: 'POST',
         headers: {

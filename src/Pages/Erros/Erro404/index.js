@@ -40,8 +40,6 @@ const ListItem = styled.li`
         75%  {color: black;} 
     }
 
-
-
     &:hover{
 
         opacity: 0.6;

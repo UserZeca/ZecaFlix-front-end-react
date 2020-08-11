@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 
 function useForm(valoresIniciais){
-    const [valores, setValores] = useState(valoresIniciais); // Desistruturação de um array
+    const [valores, setValores] = useState(valoresIniciais); 
 
 
     function setValor(chave, valor){
-        setValores({    // Desistruturação de um objeto
+        setValores({    
             ...valores,
             [chave]: valor
         })

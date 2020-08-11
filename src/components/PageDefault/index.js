@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 */
 function PageDefault({children,menuWithButtonLink}){
 
-    console.log('Valor do botão', menuWithButtonLink);
+   
     return (
         <>
                 <Menu menuWithButtonLink = {menuWithButtonLink} />

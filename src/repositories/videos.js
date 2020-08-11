@@ -4,6 +4,7 @@ const URL_VIDEOS = `${config.URL_BACKEND}/videos`;
 
 
 function create(objetoDoVideo){
+    setTimeout(()=>{console.log('Enviando novo video ao servidor...')}, 1000);
     return fetch(`${URL_VIDEOS}`,{
         method: 'POST',
         headers: {
@@ -15,8 +16,7 @@ function create(objetoDoVideo){
         async (respostaDoServidor) => {
             if(respostaDoServidor.ok){   
                 const resposta = await respostaDoServidor.json();
-                console.log('reposta', resposta);
-
+                
                 return resposta;
             }
             throw new Error('Não foi possível se conectar ao servidor!');
