@@ -57,7 +57,7 @@ na [Heroku](https://www.heroku.com/platform), e dentro dela esse comando será u
 + Vá até a pasta config (src/config), e altere o valor da constante **URL_BACKEND**, para 'http://localhost:8080';
 + Rode o comando **npm start**, dentro da pasta raíz do projeto.
 + Abra [http://localhost:8080/categorias](http://localhost:8080/categorias) para visualizar o arquivo de das categorias;
-+ Abra [http://localhost:8080/videos](http://localhost:8080/videos);
++ Abra [http://localhost:8080/videos](http://localhost:8080/videos)  para visualizar o arquivo dos videos;
 
 ### `npm run devFrontEnd`
 
