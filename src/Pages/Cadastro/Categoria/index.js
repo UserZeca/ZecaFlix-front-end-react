@@ -9,8 +9,6 @@ import categoriesRepository from '../../../repositories/categorias'
 import { Container, ContainerBox, ItenBox, ButtonLink, ContainerList, ItemList } from '../styles'
 
 
-
-
 const menuWithButtonLink = false;
 
 function CadastroCategoria(){
