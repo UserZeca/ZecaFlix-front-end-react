@@ -1,7 +1,9 @@
 # ZecaFlix-front-end-react
-[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/omariosouto/pokedex/blob/master/LICENSE)
+[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)]()
+[![Project name](https://img.shields.io/badge/UserZeca-ZecaFlix-yellow)]()
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Projeto iniciado durante a imersão react da alura, e tem com objetivo criar uma SPA([Single Page Aplication](https://www.devmedia.com.br/ja-ouviu-falar-em-single-page-applications/39009)), utilizando **React**.
+
 
 ## Available Scripts
 
@@ -14,3 +16,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+
