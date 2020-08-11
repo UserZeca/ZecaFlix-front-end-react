@@ -6,18 +6,33 @@
 
 
 > Projeto iniciado durante a imersão react da alura, e tem com objetivo criar uma SPA([Single Page Aplication](https://www.devmedia.com.br/ja-ouviu-falar-em-single-page-applications/39009)), utilizando **React**.
+>
+> Quer ver como ta ficando? Acessa a [**DEMO**](https://zeca-flix-front-end-react.vercel.app/)
 
+<p align="center">
+    <img src="https://github.com/UserZeca/ZecaFlix-front-end-react/blob/master/docs/imagemDoSite.png" alt="Imagem do Site" />
+</p>
 
-## Available Scripts
+## Available Scripts/ Scripts Disponíveis
 
-In the project directory, you can run:
+> O projeto possui alguns comandos expecíficos, que permitem um controle de como queremos executar a aplicação.
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Especificamente nesse projeto npm start irá rodar nosso **json server**, na porta 8080. Porém não há a necessidade de utilizá-lo, já que hopedei o json server, 
+na ![Heroku](), e dentro dela esse comando será utilizado automáticamente. Mas caso queira rodar em sua máquina, siga os seguintes passos:<br />
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
++ Vá até a pasta config (src/config), e altere o valor da constante **URL_BACKEND**, para 'http://localhost:8080';
++ Rode o comando **npm start**, dentro da pasta raíz do projeto.
++ Abra [http://localhost:8080/categorias](http://localhost:8080/categorias) para visualizar o arquivo de das categorias;
++ Abra [http://localhost:8080/videos](http://localhost:8080/videos);
+
+### `npm run devFrontEnd`
+
+Esse comando roda nossa aplicação front end, na porta 3000. Caso queira realizá-lo, siga os seguintes passos:
+
++ Rode o comando **npm devFrontEnd**, dentro da pasta raíz do projeto; 
++ Abra [http://localhost:3000](http://localhost:3000) para visualizar o projeto;
+
 
 
