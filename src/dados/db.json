@@ -14,7 +14,7 @@
       "titulo": "Leon e Nilce",
       "cor": "#121691",
       "link_extra": {
-        "text": "Link de um dos canais",
+        "text": "Link para o República Coisa de Nerd",
         "url": "https://www.youtube.com/channel/UChmOR1T5ZNnbRUba3lHRTOg/videos"
       }
     },
@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "titulo": "Series",
+      "titulo": "Séries",
       "cor": "red",
       "link_extra": {
         "text": "",
