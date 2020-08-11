@@ -26,12 +26,8 @@ function CadastroCategoria(){
     }
 
     
-
-
     const { valores ,handleDoValorCampo, clearForm} = useForm(valoresIniciais);
     
- 
-
     useEffect(() => {
  
         categoriesRepository.getAll().then( (respostaDoServidor) => {
