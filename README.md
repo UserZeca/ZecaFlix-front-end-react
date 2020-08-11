@@ -38,9 +38,13 @@ Esse comando roda nossa aplicação front end, na porta 3000. Caso queira realiz
 + Rode o comando **npm devFrontEnd**, dentro da pasta raíz do projeto; 
 + Abra [http://localhost:3000](http://localhost:3000) para visualizar o projeto;
 
+## Versioning/Versionamento
+
+Esse projeto não possui um sistema de versionamento.
 
 ## History/Histórico
-[Releses](https://github.com/UserZeca/ZecaFlix-front-end-react/releases)
+
+Veja as [Releses](https://github.com/UserZeca/ZecaFlix-front-end-react/releases).
 
 
 ## License/Licença do Projeto
