@@ -14,7 +14,35 @@
 </p>
 
 
+## What was done?! /O que foi feito?!
 
++ **SPA** </br> 
+    O projeto foi desenvolvido de forma que os componetes, se comportassem de maneira a aplicação se tornasse uma SPA.
+    Para isso utilizei os recursos da lib **react-router-dom**. 
+
++ **Hooks** </br>
+    Hooks, um dos recursos padrões do React, permite a reutilizações de recursos, de uma forma mais simples. Reduzindo a necesssidade de criação de várias classes e métodos.
+    E dentro do projeto, foi utilizado várias vezes, principalmente na criação dos formulários.
+
++ **Estilização dos componentes/Component styling ** </br>
+    A estilização dos componentes foi feita utilizando a lib **styled-components**, que permite armazenar "fragmentos" do jsx, dentro de constantes do JavaScript,
+    o que permite dentro de outras coisas, manipular os componentes de uma forma mais simples e mais organizada.
+
++ **Componentes Visuais/Visual Components** </br>
+   Durante o projeto foram criadas alguns componentes visuais específicos, que agregam bastante ao layout da página principal.
+   - Carroussel </br>
+       Esse componente se refere, a parte do layout que exibe a listagem na horizontal, de videos de uma categoria. Para desenvolve-lo foi utilizado a lib **[react-slick](https://react-slick.neostack.com/)**.
+   - Banner </br>
+      Esse componente se refere, a parte do layout que exibe um plano de fundo com a thumbnail do primeiro video da primeira categoria. Pra isso, o componente acessa a url referente ao video, e extraí essa informações.
+
++ **Formulários/Forms**
+    Como já foi dito, os componentes que formam o formulários, utilizaram muito Hooks, mas além disso utilizaram a lib **PropTypes**. Essa lib permite com que os elementos de armazenam dados no javascript, possam ser "tipadas", isso porque por padrão o javascript não tem uma tipagem forte, que às vezes é necessária, como no caso do formulário.  
+   
++ **Repositorios/Repositories**
+    Esse componente, é responsável pela ações que tomamos que requisitam do servidor alguma ação. Ele basicamente lida, com as requisições que fazemos ao json server. 
+
++ **Paginas/Pages**
+    O projeto possui até o momento 4 páginas,home,página de cadastro de video,página de cadastro de categoria e erro 404. Todas essas páginas, também tiveram sua construção "componentizada".
 
 
 ## Available Scripts/ Scripts Disponíveis
