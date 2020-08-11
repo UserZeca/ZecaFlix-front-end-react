@@ -1,7 +1,7 @@
 # ZecaFlix-front-end-react
 
 [![project name](https://img.shields.io/badge/UserZeca-ZecaFlix-red)](https://github.com/UserZeca)
-[![project type](https://img.shields.io/badge/React-SPA-green)]()
+[![project type](https://img.shields.io/badge/React-SPA-green)](https://www.devmedia.com.br/ja-ouviu-falar-em-single-page-applications/39009)
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/UserZeca/ZecaFlix-front-end-react/blob/master/LICENSE)
 
 
