@@ -55,7 +55,7 @@ function Home() {
               <BannerMain 
                 videoTitle={db[0].videos[0].titulo}
                 url={db[0].videos[0].url}
-                videoDescription={"O que é front-end? Trabalhando na área."}
+                videoDescription={"Do mistério das pirâmides às batalhas entre faraós e grandes conquistadores. Conheça o Antigo Egito e sua história."}
 
                 />
                   
