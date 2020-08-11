@@ -14,7 +14,7 @@
 </p>
 
 
-## 
+
 
 
 ## Available Scripts/ Scripts Disponíveis
@@ -24,7 +24,7 @@
 ### `npm start`
 
 Especificamente nesse projeto npm start irá rodar nosso **json server**, na porta 8080. Porém não há a necessidade de utilizá-lo, já que hopedei o json server, 
-na ![Heroku](https://www.heroku.com/platform), e dentro dela esse comando será utilizado automáticamente. Mas caso queira rodar em sua máquina, siga os seguintes passos:<br />
+na [Heroku](https://www.heroku.com/platform), e dentro dela esse comando será utilizado automáticamente. Mas caso queira rodar em sua máquina, siga os seguintes passos:<br />
 
 + Vá até a pasta config (src/config), e altere o valor da constante **URL_BACKEND**, para 'http://localhost:8080';
 + Rode o comando **npm start**, dentro da pasta raíz do projeto.
@@ -39,4 +39,6 @@ Esse comando roda nossa aplicação front end, na porta 3000. Caso queira realiz
 + Abra [http://localhost:3000](http://localhost:3000) para visualizar o projeto;
 
 
+## License/Licença do Projeto
 
+[MIT License](https://github.com/UserZeca/ZecaFlix-front-end-react/blob/master/LICENSE) © [UserZeca](https://github.com/UserZeca/ZecaFlix-front-end-react)
