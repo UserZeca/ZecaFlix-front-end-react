@@ -65,11 +65,11 @@
     }
   ],
   "videos": [
-    {
+   {
       "id": 1,
       "categoriaId": 1,
-      "titulo": "OS MISTÉRIOS DO ANTIGO EGITO - Nostalgia História",
-      "url": "https://www.youtube.com/watch?v=ebm-fLo9-NA"
+      "titulo": "O QUE É FASCISMO? Entenda de uma forma SIMPLES",
+      "url": "https://www.youtube.com/watch?v=mRRQcTZ1vj0"
     },
     {
       "id": 2,
@@ -77,11 +77,11 @@
       "titulo": "História no filme Apollo 13 | Nerdologia",
       "url": "https://www.youtube.com/watch?v=1WzxYQyCL6U&t=234s"
     },
-    {
+     {
       "id": 3,
       "categoriaId": 1,
-      "titulo": "O QUE É FASCISMO? Entenda de uma forma SIMPLES",
-      "url": "https://www.youtube.com/watch?v=mRRQcTZ1vj0"
+      "titulo": "OS MISTÉRIOS DO ANTIGO EGITO - Nostalgia História",
+      "url": "https://www.youtube.com/watch?v=ebm-fLo9-NA"
     },
     {
       "id": 4,
