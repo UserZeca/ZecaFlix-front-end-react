@@ -21,11 +21,11 @@
     Para isso utilizei os recursos da lib **react-router-dom**. 
 
 + **Hooks** </br>
-    Hooks, um dos recursos padrões do React, permite a reutilizações de recursos, de uma forma mais simples. Reduzindo a necesssidade de criação de várias classes e métodos.
+    [Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html), um dos recursos padrões do React, permite a reutilizações de recursos, de uma forma mais simples. Reduzindo a necesssidade de criação de várias classes e métodos.
     E dentro do projeto, foi utilizado várias vezes, principalmente na criação dos formulários.
 
 + **Estilização dos componentes/Component styling ** </br>
-    A estilização dos componentes foi feita utilizando a lib **styled-components**, que permite armazenar "fragmentos" do jsx, dentro de constantes do JavaScript,
+    A estilização dos componentes foi feita utilizando a lib **[styled-components](https://styled-components.com/)**, que permite armazenar "fragmentos" do jsx, dentro de constantes do JavaScript,
     o que permite dentro de outras coisas, manipular os componentes de uma forma mais simples e mais organizada.
 
 + **Componentes Visuais/Visual Components** </br>
@@ -36,7 +36,7 @@
       Esse componente se refere, a parte do layout que exibe um plano de fundo com a thumbnail do primeiro video da primeira categoria. Pra isso, o componente acessa a url referente ao video, e extraí essa informações.
 
 + **Formulários/Forms**
-    Como já foi dito, os componentes que formam o formulários, utilizaram muito Hooks, mas além disso utilizaram a lib **PropTypes**. Essa lib permite com que os elementos de armazenam dados no javascript, possam ser "tipadas", isso porque por padrão o javascript não tem uma tipagem forte, que às vezes é necessária, como no caso do formulário.  
+    Como já foi dito, os componentes que formam o formulários, utilizaram muito Hooks, mas além disso utilizaram a lib **[PropTypes](https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html)**. Essa lib permite com que os elementos de armazenam dados no javascript, possam ser "tipadas", isso porque por padrão o javascript não tem uma tipagem forte, que às vezes é necessária, como no caso do formulário.  
    
 + **Repositorios/Repositories**
     Esse componente, é responsável pela ações que tomamos que requisitam do servidor alguma ação. Ele basicamente lida, com as requisições que fazemos ao json server. 
