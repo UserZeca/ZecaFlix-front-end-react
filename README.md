@@ -42,7 +42,7 @@
     Esse componente, é responsável pela ações que tomamos que requisitam do servidor alguma ação. Ele basicamente lida, com as requisições que fazemos ao json server. 
 
 + **Paginas/Pages**
-    O projeto possui até o momento 4 páginas,home,página de cadastro de video,página de cadastro de categoria e erro 404. Todas essas páginas, também tiveram sua construção "componentizada".
+    O projeto possui até o momento 4 páginas,home,página de cadastro de video, página de cadastro de categoria e erro 404. Todas essas páginas, também tiveram sua construção "componentizada".
 
 
 ## Available Scripts/ Scripts Disponíveis
