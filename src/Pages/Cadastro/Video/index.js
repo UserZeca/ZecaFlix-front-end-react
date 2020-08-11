@@ -100,8 +100,8 @@ function CadastroVideo(){
                      
                     <Button type="submit" 
                       disabled={
-                        valores.titulo === '' &&
-                        valores.categoria === '' && 
+                        valores.titulo === '' ||
+                        valores.categoria === '' || 
                         valores.url === '' 
                       } 
                     >

@@ -152,9 +152,11 @@ function CadastroCategoria(){
                         <ItenBox>  
                             <Button type="submit"
                                 disabled={
-                                    (valores.titulo === '' &&
-                                     valores.descricao === '')   
-                                } 
+                                     (valores.titulo === '' || valores.descricao === '') 
+                                     || (checked === true && (valores.textLinkExtra === '' || valores.url === '') )   
+                                
+                                }
+
                             >
                                 Cadastrar
                             </Button>
