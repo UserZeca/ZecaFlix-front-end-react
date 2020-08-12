@@ -35,13 +35,13 @@
    - Banner </br>
       Esse componente se refere, a parte do layout que exibe um plano de fundo com a thumbnail do primeiro video da primeira categoria. Pra isso, o componente acessa a url referente ao video, e extraí essa informações.
 
-+ **Formulários/Forms**
++ **Forms/Formulários**
     Como já foi dito, os componentes que formam o formulários, utilizaram muito o recurso Hooks, criando até hooks constumizáveis. Mas além disso do Hooks,foi utilizado a lib **[PropTypes](https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html)**, essa lib permite com que os elementos de armazenam dados no javascript, possam ser "tipadas", isso porque por padrão o javascript não tem uma tipagem forte, que às vezes é necessária, como no caso do formulário.  
    
-+ **Repositorios/Repositories**
++ **Repositories/Repositórios**
     Esse componente, é responsável pela ações que tomamos que requisitam do servidor alguma ação. Ele basicamente lida, com as requisições que fazemos ao json server. 
 
-+ **Páginas/Pages**
++ **Pages/Páginas**
     O projeto possui até o momento 4 páginas,home,página de cadastro de video, página de cadastro de categoria e erro 404. Todas essas páginas, também tiveram sua construção "componentizada".
 
 
