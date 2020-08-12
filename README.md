@@ -33,7 +33,7 @@
    - Carroussel </br>
        Esse componente se refere, a parte do layout que exibe a listagem na horizontal, de videos de uma categoria. Para desenvolve-lo foi utilizado a lib **[react-slick](https://react-slick.neostack.com/)**.
    - Banner </br>
-      Esse componente se refere, a parte do layout que exibe um plano de fundo com a thumbnail do primeiro video da primeira categoria. Pra isso, o componente acessa a url referente ao video, e extraí essa informações.
+      Esse componente se refere, a parte do layout que exibe um plano de fundo com a thumbnail do primeiro video da primeira categoria. Pra isso, o componente acessa a url referente ao video, e extraí essas informações.
 
 + **Forms/Formulários**
     Como já foi dito, os componentes que formam o formulários, utilizaram muito o recurso Hooks, criando até hooks constumizáveis. Mas além disso do Hooks,foi utilizado a lib **[PropTypes](https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html)**, essa lib permite com que os elementos de armazenam dados no javascript, possam ser "tipadas", isso porque por padrão o javascript não tem uma tipagem forte, que às vezes é necessária, como no caso do formulário.  
