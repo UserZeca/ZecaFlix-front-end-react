@@ -24,11 +24,11 @@
     [Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html), um dos recursos padrões do React, permite a reutilizações de recursos, de uma forma mais simples. Reduzindo a necesssidade de criação de várias classes e métodos.
     E dentro do projeto, foi utilizado várias vezes, principalmente na criação dos formulários.
 
-+ **Estilização dos componentes/Component styling** </br>
++ **Component styling/Estilização dos componentes** </br>
     A estilização dos componentes foi feita utilizando a lib **[styled-components](https://styled-components.com/)**, que permite armazenar "fragmentos" do jsx, dentro de constantes do JavaScript,
     o que permite dentro de outras coisas, manipular os componentes de uma forma mais simples e mais organizada.
 
-+ **Componentes Visuais/Visual Components** </br>
++ **Visual Components/Componentes Visuais** </br>
    Durante o projeto foram criadas alguns componentes visuais específicos, que agregam bastante ao layout da página principal.
    - Carroussel </br>
        Esse componente se refere, a parte do layout que exibe a listagem na horizontal, de videos de uma categoria. Para desenvolve-lo foi utilizado a lib **[react-slick](https://react-slick.neostack.com/)**.
